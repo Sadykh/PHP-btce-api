@@ -1,0 +1,27 @@
+{
+  "name": "sadykh/yii2-btce-api",
+  "description": "BTC-e api yii2-extensions",
+  "keywords": [
+    "yii2",
+    "btc-e",
+    "btce"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT License",
+  "authors": [
+    {
+      "name": "Sadykh Sadykhov",
+      "email": "sadykh.sadykhov@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.0.0",
+    "yiisoft/yii2": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "sadykh\\btce\\": ""
+    }
+  }
+}
