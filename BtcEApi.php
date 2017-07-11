@@ -14,7 +14,7 @@ class BtcEApi extends Object
     const DIRECTION_BUY = 'buy';
     const DIRECTION_SELL = 'sell';
 
-    protected $publicApi = 'https://btc-e.com/api/3/';
+    protected $publicApi = 'https://btc-e.nz/api/3/';
 
     public $apiKey;
     public $apiSecret;
@@ -23,9 +23,7 @@ class BtcEApi extends Object
 
     public function __construct()
     {
-        if (!$this->apiKey || !$this->apiSecret) {
-            throw new InvalidConfigException("Invalid config found.");
-        }
+
         if ($this->nonce === false) {
             // Try 1?
             $this->nonce = time();
@@ -55,6 +53,9 @@ class BtcEApi extends Object
      */
     public function apiQuery($method, $req = array())
     {
+        if (!$this->apiKey || !$this->apiSecret) {
+            throw new InvalidConfigException("Invalid config found.");
+        }
         $req['method'] = $method;
         $mt = $this->getNonce();
         $req['nonce'] = $mt[1];
