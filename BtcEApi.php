@@ -14,7 +14,7 @@ class BtcEApi extends Object
     const DIRECTION_BUY = 'buy';
     const DIRECTION_SELL = 'sell';
 
-    protected $publicApi = 'https://btc-e.nz/api/3/';
+    protected $publicApi = 'https://wex.nz/api/3/';
 
     public $apiKey;
     public $apiSecret;
